@@ -40,11 +40,24 @@ const { description, title } = Astro.props;
       [x-cloak] {
         display: none !important;
       }
+      .js-loading *,
+      .js-loading *:before,
+      .js-loading *:after {
+        animation-play-state: paused !important;
+      }
     </style>
 
     <script>
       import Alpine from 'alpinejs';
       import collapse from '@alpinejs/collapse';
+
+      document.body.classList.add('js-loading');
+
+      window.addEventListener('load', showPage);
+
+      function showPage() {
+        document.body.classList.remove('js-loading');
+      }
 
       Alpine.plugin(collapse);
 
