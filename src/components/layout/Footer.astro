@@ -1,0 +1,46 @@
+---
+
+---
+
+<footer
+  class="mt-16 bg-primary-500/10 py-16 dark:bg-primary-400/10 lg:mt-20 lg:py-20"
+  aria-labelledby="footer-heading"
+>
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="sm:gap-22 grid items-center justify-center gap-12 sm:grid-cols-3 xl:gap-28">
+      <div class="col-span-1 flex justify-center">
+        <img
+          class="w-48 sm:w-80"
+          :src="$store.theme.isDark ? 'assets/change-is-here-dark.png' : 'assets/change-is-here.png'"
+          alt="Change is here"
+        />
+      </div>
+
+      <div class="col-span-1 mx-auto text-center">
+        <img
+          width="100"
+          :src="$store.theme.isDark ? '/assets/logo-inverted.webp' : '/assets/logo.webp'"
+          alt="Reflair logo"
+        />
+      </div>
+      <div class="col-span-1 flex flex-col items-center justify-center gap-2">
+        <p class="text-center text-xl font-bold">Get in Touch</p>
+        <p class="text-center text-lg">Menlo Park, Pretoria</p>
+        <p class="text-center text-lg">083 506 8001</p>
+        <a class="text-center text-lg underline" href="mailto:mia@reflair.co.za"
+          >mia@reflair.co.za</a
+        >
+        <p class="text-center text-lg">Menlo Park, Pretoria</p>
+        <!-- Instagram SVG -->
+        <svg
+          class="flex-no-shrink h-12 w-12 fill-current"
+          viewBox="0 0 256 256"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            d="M128 80a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48m0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32m48-136H80a56.06 56.06 0 0 0-56 56v96a56.06 56.06 0 0 0 56 56h96a56.06 56.06 0 0 0 56-56V80a56.06 56.06 0 0 0-56-56m40 152a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V80a40 40 0 0 1 40-40h96a40 40 0 0 1 40 40ZM192 76a12 12 0 1 1-12-12a12 12 0 0 1 12 12"
+          ></path></svg
+        >
+      </div>
+    </div>
+  </div>
+</footer>

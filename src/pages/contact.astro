@@ -1,0 +1,31 @@
+---
+import ContactInfo from '../components/contact/ContactInfo.astro';
+import Layout from '../layouts/Layout.astro';
+import GoogleMaps from '../components/contact/GoogleMaps.astro';
+import ContactHero from '../components/contact/ContactHero.astro';
+---
+
+<Layout description="Contact me to learn more about how I can help you." title="Contact · Reflair">
+  <div class="services-img"></div>
+  <section class="py-12 sm:py-12">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div class="flex -translate-y-72 flex-col items-end">
+        <h2 class="mb-6 text-4xl font-medium tracking-tight text-white sm:text-6xl">Contacts</h2>
+        <div class="w-20 border-b-2 border-b-white"></div>
+      </div>
+      <ContactInfo />
+      <GoogleMaps />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .services-img {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(./assets/contacts-hero.jpg);
+    height: 60vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+  }
+</style>

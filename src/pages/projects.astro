@@ -1,0 +1,40 @@
+---
+const projects = [
+  {
+    image: '/assets/projects-img/projects-1.jpg',
+    description: 'Antique credenza with nice paintings',
+  },
+  { image: '/assets/projects-img/projects-2.jpg', description: 'A cozy living room' },
+  { image: '/assets/projects-img/projects-3.jpg', description: 'A bedroom' },
+  { image: '/assets/projects-img/projects-4.jpg', description: 'Dining room' },
+  { image: '/assets/projects-img/projects-5.jpg', description: 'Modern living room' },
+  { image: '/assets/projects-img/projects-6.jpg', description: 'Living room' },
+  { image: '/assets/projects-img/projects-7.jpg', description: 'Dining room' },
+  { image: '/assets/projects-img/projects-8.jpg', description: 'Colorful living room' },
+  { image: '/assets/projects-img/projects-9.jpg', description: 'Cafe shop counter' },
+  { image: '/assets/projects-img/projects-10.jpg', description: 'Bathroom shower' },
+  { image: '/assets/projects-img/projects-11.jpg', description: 'Couch pillows' },
+  { image: '/assets/projects-img/projects-12.jpg', description: 'Colorful pillows' },
+  { image: '/assets/projects-img/projects-13.jpg', description: 'Couch with flowers' },
+];
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout description="A display of some of the projects I've worked on" title="Projects · Reflair">
+  <section class="py-12 sm:py-12">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="mb-8 text-3xl font-medium tracking-tight sm:text-4xl">Projects</h2>
+      <div class="flex flex-col">
+        {
+          projects.map((project) => (
+            <img
+              src={project.image}
+              alt={project.description}
+              class="my-2 rounded-3xl shadow-md sm:my-6"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

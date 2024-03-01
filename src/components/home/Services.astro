@@ -1,0 +1,72 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Design',
+    class: 'service-img-1',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+  {
+    step: '02',
+    name: 'Develop',
+    class: 'service-img-2',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+  {
+    step: '03',
+    name: 'Maintain',
+    class: 'service-img-3',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div
+              class={`${service.class} service-wrap z-5 flex flex-col gap-12  rounded-3xl px-6 py-8`}
+            >
+              <p class="text-md z-6">{service.step}</p>
+              <div class="z-4 flex flex-col gap-4">
+                <h3 class="text-2xl font-bold">{service.name}</h3>
+                <p class="text-black text-lg font-semibold sm:text-lg">{service.description}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-wrap {
+    height: 50vh;
+    width: 100%;
+    border-radius: 1.5rem;
+  }
+
+  .service-img-1 {
+    background-image: url('/assets/service-img-1.webp');
+    background-color: rgba(255, 0, 0, 0.2);
+  }
+
+  .service-img-2 {
+    background-image: url('/assets/service-img-2.webp');
+    background-position: 50% 0;
+  }
+
+  .service-img-3 {
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7)),
+      url('/assets/service-img-3.webp');
+    /* background-image: url('/assets/service-img-3.webp'); */
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+const projects = [
+  {
+    image: '/assets/projects-img/projects-1.jpg',
+    description: 'Antique credenza with nice paintings',
+  },
+  { image: '/assets/projects-img/projects-2.jpg', description: 'A cozy living room' },
+  { image: '/assets/projects-img/projects-3.jpg', description: 'A bedroom' },
+  { image: '/assets/projects-img/projects-4.jpg', description: 'Dining room' },
+  { image: '/assets/projects-img/projects-5.jpg', description: 'Modern living room' },
+  { image: '/assets/projects-img/projects-6.jpg', description: 'Living room' },
+];
+---
+
+<section class="py-12">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="mb-8 text-3xl font-medium tracking-tight sm:text-4xl">Projects</h2>
+    <div class="col-1 grid gap-12 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
+      {
+        projects.map((project) => (
+          <img src={project.image} alt={project.description} class="rounded-3xl" />
+        ))
+      }
+    </div>
+    <div class="mx-auto mt-8 flex justify-center">
+      <a class="mb-8 text-center text-3xl font-medium tracking-tight sm:text-2xl" href="/projects"
+        >...more project photos...</a
+      >
+    </div>
+  </div>
+</section>
