@@ -9,32 +9,32 @@ import Projects from '../components/home/Projects.astro';
 ---
 
 <Layout
-  description="Loads of inspiration to make any interior seem fresh and updated again."
-  title="Reflair interiors"
+ description="Loads of inspiration to make any interior seem fresh and updated again."
+ title="Reflair interiors"
 >
-  <!-- Hero section -->
-  <div class="hero-img">
-    <div class="container">
-      <div class="title">
-        <h2>THE ART OF</h2>
-        <h1>REFLAIR</h1>
-        <div class="line-element"></div>
-      </div>
+ <!-- Hero section -->
+ <div class="hero-img">
+  <div class="container">
+   <div class="title">
+    <h2>THE ART OF</h2>
+    <h1>REFLAIR</h1>
+    <div class="line-element"></div>
+   </div>
 
-      <span class="des">
-        Loads of inspiration to make any interior seem fresh and updated again.</span
-      >
-      <a
-        href="/contact"
-        class="hero-button inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
-      >
-        Contact us
-      </a>
-    </div>
+   <span class="des text-md sm:text-xl">
+    Loads of inspiration to make any interior seem fresh and updated again</span
+   >
+   <a
+    href="/contact"
+    class="hero-button inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+   >
+    Contact us
+   </a>
   </div>
+ </div>
 
-  <section class="pb-6 sm:pb-8">
-    <!-- <div class="mx-auto w-full">
+ <section class="pb-6 sm:pb-8">
+  <!-- <div class="mx-auto w-full">
       <div class="flex flex-col gap-16">
         <div class="flex flex-col items-center justify-center">
           <Image src={heroImg} alt="" class="max-w-1200 hero-img" />
@@ -48,153 +48,153 @@ import Projects from '../components/home/Projects.astro';
         </div>
       </div>
     </div> -->
-  </section>
-  <About />
-  <MeetMia />
-  <FlairInjections />
-  <Projects />
-  <Testimonials />
+ </section>
+ <About />
+ <MeetMia />
+ <FlairInjections />
+ <Projects />
+ <Testimonials />
 
-  <Cta />
+ <Cta />
 </Layout>
 
 <style>
-  :root {
-    --animation-time: 2000ms;
-  }
+ :root {
+  --animation-time: 2000ms;
+ }
 
-  .hero-img {
-    height: 750px;
-    overflow: hidden;
-    background: url(../../public/assets/hero.jpg) no-repeat center;
-    background-size: cover;
+ .hero-img {
+  height: 750px;
+  overflow: hidden;
+  background: url(/assets/hero.jpg) no-repeat center;
+  background-size: cover;
 
-    margin-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
 
-  .container {
-    overflow: hidden;
-    text-align: center;
-    color: white;
-    font-weight: 700;
-  }
+ .container {
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-family: FuturaBold;
+ }
 
+ .container h1 {
+  font-size: 72px;
+  margin: 0;
+  margin-bottom: 0.7rem;
+  line-height: 0.9;
+  animation: riflair-load 1s;
+ }
+ .container h2 {
+  font-size: 36px;
+  margin: 0;
+
+  animation: the-art-of-load var(--animation-time);
+ }
+
+ .line-element {
+  display: inline-block;
+  height: 4px;
+  width: 100px;
+  background-color: white;
+  margin-bottom: 0.5rem;
+  animation: line-element-load var(--animation-time);
+ }
+
+ @media screen and (max-width: 1036px) {
   .container h1 {
-    font-size: 72px;
-
-    margin: 0;
-    margin-bottom: 0.7rem;
-    line-height: 0.7;
-    animation: riflair-load 1s;
+   font-size: 64px;
   }
   .container h2 {
-    font-size: 36px;
-    margin: 0;
-
-    animation: the-art-of-load var(--animation-time);
+   font-size: 32px;
   }
+ }
 
+ @media screen and (max-width: 480px) {
+  .container h1 {
+   font-size: 48px;
+   letter-spacing: 0.1em;
+   margin-bottom: 0.5rem;
+  }
+  .container h2 {
+   font-size: 28px;
+   margin-bottom: 0.2rem;
+  }
+  .hero-img {
+   height: 550px;
+   margin-bottom: 2rem;
+  }
   .line-element {
-    display: inline-block;
-    height: 4px;
-    width: 100px;
-    background-color: white;
-    margin-bottom: 2rem;
-    animation: line-element-load var(--animation-time);
+   width: 70px;
+   background-color: white;
+   margin-bottom: 0.4rem;
+   animation: line-element-load var(--animation-time);
   }
+ }
 
-  @media screen and (max-width: 1036px) {
-    .container h1 {
-      font-size: 64px;
-    }
-    .container h2 {
-      font-size: 32px;
-    }
-  }
+ .des {
+  margin: 20px;
+  display: block;
+  text-shadow: 0 0 10px black;
+  animation: des-load var(--animation-time);
+  margin-bottom: 2rem;
+  animation-timing-function: ease-out;
+ }
 
-  @media screen and (max-width: 480px) {
-    .container h1 {
-      font-size: 36px;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
-    }
-    .container h2 {
-      font-size: 20px;
-      margin-bottom: 0.2rem;
-    }
-    .hero-img {
-      height: 550px;
-      margin-bottom: 2rem;
-    }
-    .line-element {
-      width: 70px;
-      background-color: white;
-      margin-bottom: 0.4rem;
-      animation: line-element-load var(--animation-time);
-    }
-  }
+ .hero-button {
+  animation: button-load var(--animation-time);
+ }
 
-  .des {
-    margin: 20px;
-    display: block;
-    text-shadow: 0 0 10px black;
-    animation: des-load var(--animation-time);
-    margin-bottom: 2rem;
-    animation-timing-function: ease-out;
+ @keyframes riflair-load {
+  0% {
+   opacity: 0;
   }
+  100% {
+   opacity: 1;
+  }
+ }
 
-  .hero-button {
-    animation: button-load var(--animation-time);
+ @keyframes the-art-of-load {
+  0% {
+   transform: translatex(20%);
+   opacity: 0;
   }
+  100% {
+   transform: translateY(0);
+   opacity: 1;
+  }
+ }
 
-  @keyframes riflair-load {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+ @keyframes button-load {
+  0% {
+   transform: scale(0);
   }
+  100% {
+   transform: scale(1);
+  }
+ }
+ @keyframes des-load {
+  0% {
+   transform: translatex(100%);
+   opacity: 0;
+  }
+  100% {
+   transform: translateY(0);
+   opacity: 1;
+  }
+ }
 
-  @keyframes the-art-of-load {
-    0% {
-      transform: translatex(20%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+ @keyframes line-element-load {
+  0% {
+   transform: scale(0);
   }
-
-  @keyframes button-load {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
+  100% {
+   transform: scale(1);
   }
-  @keyframes des-load {
-    0% {
-      transform: translatex(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes line-element-load {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+ }
 </style>

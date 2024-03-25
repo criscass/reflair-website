@@ -11,9 +11,10 @@ module.exports = {
       transparent: 'transparent',
       white: '#ffffff',
       primary: colors.stone,
+      error: colors.red,
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['SerifBook', 'sans-serif'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
