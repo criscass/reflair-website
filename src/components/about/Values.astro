@@ -1,64 +1,57 @@
 ---
 const values = [
-  [
-    {
-      ref: '01',
-      name: '(Inspiring title here)',
-      description:
-        "To resonate with a client's tastes and style. I like to use what's available to a client and take into consideration what makes them happy as I am of the opinion that our belongings restores our memories and connects us with others and with the past.",
-    },
-    {
-      ref: '02',
-      name: '(Inspiring title here)',
-      description:
-        "To move from a 'take-make-dispose' approach towards a 'recycle-repair-reuse' approach.",
-    },
-  ],
-  [
-    {
-      ref: '03',
-      name: '(Inspiring title here)',
-      description:
-        "To move from a 'take-make-dispose' approach towards a 'recycle-repair-reuse' approach.",
-    },
-    {
-      ref: '04',
-      name: '(Inspiring title here)',
-      description:
-        'To empower the client and involve them as little or as much as they like - to the extent that home renovations can be undertaken entirely independently if so preferred.',
-    },
-  ],
+ {
+  ref: '01',
+  name: '(Inspiring title here)',
+  description:
+   "To resonate with a client's tastes and style. I like to use what's available to a client and take into consideration what makes them happy as I am of the opinion that our belongings restores our memories and connects us with others and with the past.",
+ },
+ {
+  ref: '02',
+  name: '(Inspiring title here)',
+  description:
+   "To move from a 'take-make-dispose' approach towards a 'recycle-repair-reuse' approach.",
+ },
+
+ {
+  ref: '03',
+  name: '(Inspiring title here)',
+  description:
+   "To move from a 'take-make-dispose' approach towards a 'recycle-repair-reuse' approach.",
+ },
+ {
+  ref: '04',
+  name: '(Inspiring title here)',
+  description:
+   'To empower the client and involve them as little or as much as they like - to the extent that home renovations can be undertaken entirely independently if so preferred.',
+ },
 ];
 ---
 
 <section class="py-16 sm:py-20">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Consultations</h2>
-      <h3 class="text-xl font-light tracking-tight sm:text-2xl">
-        <span class="font-semibold"> Flair Injection consultations</span> provide practical
-        information, honest recommendations and loads of inspiration to make any interior seem fresh
-        and updated again - and the objectives are:
-      </h3>
-      <div class="grid gap-8 lg:grid-cols-2">
-        {
-          values.map((column, index) => (
-            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
-              {column.map((value) => (
-                <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
-                  <p class="text-sm">{value.ref}</p>
-                  <div class="flex flex-col gap-4">
-                    <h3 class="text-xl font-medium">{value.name}</h3>
-                    <p class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))
-        }
+ <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+  <div class="flex flex-col gap-8 lg:gap-12">
+   <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Consultations</h2>
+   <h3 class="text-xl font-light tracking-tight sm:text-2xl">
+    <span class="font-semibold"> Flair Injection consultations</span> provide practical information,
+    honest recommendations and loads of inspiration to make any interior seem fresh and updated
+    again - and the objectives are:
+   </h3>
+   <div class="grid gap-8 lg:grid-cols-2">
+    {
+     values.map((value) => (
+      <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+       <p class="text-md sm:text-lg">{value.ref}</p>
+       <div class="flex flex-col gap-4">
+        <h3 class="text-xl font-medium sm:text-2xl">{value.name}</h3>
+        <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+         {value.description}
+        </p>
+       </div>
       </div>
-    </div>
+     ))
+    }
+   </div>
   </div>
+ </div>
 </section>
