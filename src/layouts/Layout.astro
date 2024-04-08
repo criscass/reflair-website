@@ -21,6 +21,35 @@ const { description, title } = Astro.props;
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
+  <!-- Open Graph -->
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://reflair-website.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Reflair interiors" />
+  <meta
+   property="og:description"
+   content="Loads of inspiration to make any interior seem fresh and updated again."
+  />
+  <meta
+   property="og:image"
+   content="https://reflair-website.vercel.app/public/social-media-graph.jpg"
+  />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:domain" content="reflair-website.vercel.app" />
+  <meta property="twitter:url" content="https://reflair-website.vercel.app/" />
+  <meta name="twitter:title" content="Reflair interiors" />
+  <meta
+   name="twitter:description"
+   content="Loads of inspiration to make any interior seem fresh and updated again."
+  />
+  <meta
+   name="twitter:image"
+   content="https://reflair-website.vercel.app/public/social-media-graph.jpg"
+  />
+
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={description} />
   <title>{title}</title>
