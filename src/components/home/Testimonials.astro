@@ -45,11 +45,33 @@ const testimonials = [
  {
   name: 'Elsabé Hanekom',
 
+  message: `"Exceptional service, no matter how small the project. Mia's valuable knowledge and pragmatic suggestions assisted our decision making with great results!"`,
+ },
+ {
+  name: 'Mari Lourens',
+
   message:
-   '“Exceptional service, no matter how small the project. Mia’s valuable knowledge and pragmatic suggestions assisted our decision making with great results!”',
+   '"Mia, has a special gift of bringing harmony to a place through interior. She has a superior sense of optimizing space and flow. Her planning and accuracy of measurements, guarantees a high-quality end result."',
+ },
+ {
+  name: 'Anjo du Toit',
+
+  message: `"Mia is such a nice person to work with and always gives creative ideas to liven up a room. She knows what to do if you want to beautify a space but am unsure where to start. She assisted us in creating our baby boy's bedroom and added little clouds to the wall, which cemented the theme and brought the entire space together."`,
+ },
+ {
+  name: 'Althea Chamberlain',
+
+  message: `"Mia undertook a challenging project for me and guided me on which fabric was suitable and what was on the market and listened keenly to what my needs and preferences were and tackled our project with patience, enthusiasm, energy, and meticulous attention to detail.  Not only did we end up with a lovely colour combination of  upholstery fabric, linen, towels and an exquisitely stitched comforter but Mia also sourced amongst other things our crockery and glasses. Many thanks Mia you changed what I at first perceived as daunting to a fun project."`,
  },
 ];
 ---
+
+<style>
+ /* CSS to hide testimonials initially after the first three */
+ .testimonial.hidden {
+  display: none;
+ }
+</style>
 
 <section class="py-16 sm:py-20">
  <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -58,11 +80,16 @@ const testimonials = [
     Testimonials
    </h2>
    <div
+    id="testimonialsContainer"
     class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
    >
     {
-     testimonials.map((testimonial) => (
-      <figure class="mx-auto flex max-w-lg flex-col items-center gap-2 py-8 lg:px-8 lg:py-4">
+     testimonials.map((testimonial, index) => (
+      <figure
+       class={`testimonial mx-auto flex max-w-lg flex-col items-center gap-2 py-8 lg:px-8 lg:py-4 ${
+        index > 2 ? 'hidden' : ''
+       }`}
+      >
        <div class="flex flex-row gap-2">
         {[...Array(3)].map(() => (
          <svg
@@ -88,6 +115,23 @@ const testimonials = [
      ))
     }
    </div>
+   <button
+    id="toggleButton"
+    class="mt-8 rounded bg-primary-600 px-4 py-2 text-white hover:bg-primary-700"
+   >
+    See More Testimonials
+   </button>
   </div>
  </div>
 </section>
+
+<script>
+ document.getElementById('toggleButton').addEventListener('click', function () {
+  const testimonials = document.querySelectorAll('#testimonialsContainer .testimonial.hidden');
+  const isExpanded = testimonials.length === 0;
+  document.querySelectorAll('#testimonialsContainer > figure').forEach((testimonial, index) => {
+   if (index > 2) testimonial.classList.toggle('hidden');
+  });
+  this.textContent = isExpanded ? 'See More Testimonials' : 'See Less';
+ });
+</script>

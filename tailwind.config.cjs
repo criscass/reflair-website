@@ -9,7 +9,7 @@ module.exports = {
     colors: {
       current: 'currentColor',
       transparent: 'transparent',
-      white: '#ffffff',
+      white: '#e7dfce',
       primary: colors.stone,
       error: colors.red,
     },
