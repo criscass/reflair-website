@@ -15,6 +15,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['SerifBook', 'sans-serif'],
+      moontime: ['Moontime', 'Brush Script MT'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],

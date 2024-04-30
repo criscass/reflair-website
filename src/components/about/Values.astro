@@ -2,28 +2,25 @@
 const values = [
  {
   ref: '01',
-  name: '(Inspiring title here)',
+  name: 'To assist the client in creating a space that will spark joy (thanks Marie Kondo!)',
   description:
-   "To resonate with a client's tastes and style. I like to use what's available to a client and take into consideration what makes them happy as I am of the opinion that our belongings restores our memories and connects us with others and with the past.",
+   'I try to take into consideration what makes the client happy as I am of the opinion that our belongings restores our memories and connects us with others and with the past.',
  },
  {
   ref: '02',
-  name: '(Inspiring title here)',
-  description:
-   "To move from a 'take-make-dispose' approach towards a 'recycle-repair-reuse' approach.",
+  name: `To resemble the client's tastes and style`,
+  description: `To quote Bunny Williams: "I like an interior that defies labelling. I don't really want someone to walk into a room and know that I did it"... I couldn't agree more!`,
  },
 
  {
   ref: '03',
-  name: '(Inspiring title here)',
-  description:
-   "To move from a 'take-make-dispose' approach towards a 'recycle-repair-reuse' approach.",
+  name: 'To spare a thought for the planet',
+  description: `I like to make use of what is already available - and aim to move from a "take-make-dispose" approach towards a "recycle-repair-reuse" approach.`,
  },
  {
   ref: '04',
-  name: '(Inspiring title here)',
-  description:
-   'To empower the client and involve them as little or as much as they like - to the extent that home renovations can be undertaken entirely independently if so preferred.',
+  name: 'To make it affordable',
+  description: `When the client is provided with the "recipe", it enables and empowers them so that renovations can be undertaken entirely by themselves and according to their own timeframe.`,
  },
 ];
 ---
@@ -35,7 +32,7 @@ const values = [
    <h3 class="text-xl font-light tracking-tight sm:text-2xl">
     <span class="font-semibold"> Flair Injection consultations</span> provide practical information,
     honest recommendations and loads of inspiration to make any interior seem fresh and updated
-    again - and the objectives are:
+    again - and the objectives are as follows:
    </h3>
    <div class="grid gap-8 lg:grid-cols-2">
     {
@@ -43,7 +40,7 @@ const values = [
       <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
        <p class="text-md sm:text-lg">{value.ref}</p>
        <div class="flex flex-col gap-4">
-        <h3 class="text-xl font-medium sm:text-2xl">{value.name}</h3>
+        <h3 class="font-moontime text-2xl sm:text-4xl">{value.name}</h3>
         <p class="text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
          {value.description}
         </p>
