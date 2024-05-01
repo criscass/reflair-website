@@ -12,10 +12,11 @@ module.exports = {
       white: '#e7dfce',
       primary: colors.stone,
       error: colors.red,
+      blush: '#DDCCC0',
     },
     fontFamily: {
       sans: ['SerifBook', 'sans-serif'],
-      moontime: ['Moontime', 'Brush Script MT'],
+      moontime: ['ArchitectDaugter', 'Brush Script MT'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
