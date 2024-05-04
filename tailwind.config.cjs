@@ -16,7 +16,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['SerifBook', 'sans-serif'],
-      moontime: ['ArchitectDaugter', 'Brush Script MT'],
+      moontime: ['xarrovv', 'Brush Script MT'],
     },
     fontSize: {
       xs: ['0.75rem', '1rem'],
