@@ -1,6 +1,6 @@
 ---
 import About from '../components/home/About.astro';
-
+import Hero from '../components/home/Hero.astro';
 import Testimonials from '../components/home/Testimonials.astro';
 import Layout from '../layouts/Layout.astro';
 import MeetMia from '../components/home/MeetMia.astro';
@@ -12,43 +12,7 @@ import Projects from '../components/home/Projects.astro';
  description="Loads of inspiration to make any interior seem fresh and updated again."
  title="Reflair interiors"
 >
- <!-- Hero section -->
- <div class="hero-img">
-  <div class="container">
-   <div class="title">
-    <h2>THE ART OF</h2>
-    <h1>REFLAIR</h1>
-    <div class="line-element"></div>
-   </div>
-
-   <span class="des text-md sm:text-xl">
-    Loads of inspiration to make any interior seem fresh and updated again</span
-   >
-   <a
-    href="/contact"
-    class="hero-button inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
-   >
-    Contact us
-   </a>
-  </div>
- </div>
-
- <section class="pb-6 sm:pb-8">
-  <!-- <div class="mx-auto w-full">
-      <div class="flex flex-col gap-16">
-        <div class="flex flex-col items-center justify-center">
-          <Image src={heroImg} alt="" class="max-w-1200 hero-img" />
-          <div class="flex flex-col items-center gap-8 sm:gap-10">
-            <div class="flex max-w-xl flex-col items-center gap-4 sm:gap-6">
-              
-            </div>
-
-            
-          </div>
-        </div>
-      </div>
-    </div> -->
- </section>
+ <Hero />
  <About />
  <MeetMia />
  <FlairInjections />

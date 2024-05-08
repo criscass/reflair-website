@@ -14,7 +14,7 @@
     "@astrojs/tailwind": "4.0.0",
     "@types/alpinejs": "3.7.2",
     "alpinejs": "3.12.3",
-    "astro": "2.10.13",
+    "astro": "^2.10.15",
     "astro-compress": "^2.2.11",
     "prettier": "3.0.2",
     "prettier-plugin-astro": "0.12.0",
