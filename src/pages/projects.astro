@@ -1,40 +1,58 @@
 ---
 const projects = [
-  {
-    image: '/assets/projects-img/projects-1.jpg',
-    description: 'Antique credenza with nice paintings',
-  },
-  { image: '/assets/projects-img/projects-2.jpg', description: 'A cozy living room' },
-  { image: '/assets/projects-img/projects-3.jpg', description: 'A bedroom' },
-  { image: '/assets/projects-img/projects-4.jpg', description: 'Dining room' },
-  { image: '/assets/projects-img/projects-5.jpg', description: 'Modern living room' },
-  { image: '/assets/projects-img/projects-6.jpg', description: 'Living room' },
-  { image: '/assets/projects-img/projects-7.jpg', description: 'Dining room' },
-  { image: '/assets/projects-img/projects-8.jpg', description: 'Colorful living room' },
-  { image: '/assets/projects-img/projects-9.jpg', description: 'Cafe shop counter' },
-  { image: '/assets/projects-img/projects-10.jpg', description: 'Bathroom shower' },
-  { image: '/assets/projects-img/projects-11.jpg', description: 'Couch pillows' },
-  { image: '/assets/projects-img/projects-12.jpg', description: 'Colorful pillows' },
-  { image: '/assets/projects-img/projects-13.jpg', description: 'Couch with flowers' },
+ {
+  image: '/assets/projects-img/projects-1.jpg',
+  description: 'Antique credenza with nice paintings',
+ },
+ { image: '/assets/projects-img/projects-2.jpg', description: 'A cozy living room' },
+ { image: '/assets/projects-img/projects-3.jpg', description: 'A bedroom' },
+ { image: '/assets/projects-img/projects-4.jpg', description: 'Dining room' },
+ { image: '/assets/projects-img/projects-5.jpg', description: 'Modern living room' },
+ { image: '/assets/projects-img/projects-6.jpg', description: 'Living room' },
+ { image: '/assets/projects-img/projects-7.jpg', description: 'Dining room' },
+ { image: '/assets/projects-img/projects-8.jpg', description: 'Colorful living room' },
+ { image: '/assets/projects-img/projects-9.jpg', description: 'Cafe shop counter' },
+ { image: '/assets/projects-img/projects-10.jpg', description: 'Bathroom shower' },
+ { image: '/assets/projects-img/projects-11.jpg', description: 'Couch pillows' },
+ { image: '/assets/projects-img/projects-12.jpg', description: 'Colorful pillows' },
+ { image: '/assets/projects-img/projects-13.jpg', description: 'Couch with flowers' },
+ { image: '/assets/projects-img/projects-14.jpg', description: 'Living room with lots of books' },
+ { image: '/assets/projects-img/projects-15.jpg', description: 'Bedroom in light flowery colours' },
+ { image: '/assets/projects-img/projects-16.jpg', description: 'Plant in a vase on a coffy table' },
+ {
+  image: '/assets/projects-img/projects-17.jpg',
+  description: 'Arm chair and pillow with ducks motiv',
+ },
+ { image: '/assets/projects-img/projects-18.jpg', description: 'Paintings on a wall' },
+ { image: '/assets/projects-img/projects-19.jpg', description: 'Curtains in sandy colour' },
+ { image: '/assets/projects-img/projects-20.jpg', description: 'Earthy green bed pillows' },
+ { image: '/assets/projects-img/projects-21.jpg', description: 'Garden couch with pillows' },
+ { image: '/assets/projects-img/projects-22.jpg', description: 'Oval mirror and plants' },
+ { image: '/assets/projects-img/projects-23.jpg', description: 'Fruit basket and olive leaves' },
+ {
+  image: '/assets/projects-img/projects-24.jpg',
+  description: 'drawer full of colourful stationary',
+ },
+ { image: '/assets/projects-img/projects-25.jpg', description: 'Living room' },
+ {
+  image: '/assets/projects-img/projects-26.jpg',
+  description: 'Living room in leather and flowers',
+ },
 ];
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout description="A display of some of the projects I've worked on" title="Projects · Reflair">
-  <section class="py-12 sm:py-12">
-    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="mb-8 text-3xl font-medium tracking-tight sm:text-4xl">Projects</h2>
-      <div class="flex flex-col">
-        {
-          projects.map((project) => (
-            <img
-              src={project.image}
-              alt={project.description}
-              class="my-6 rounded-3xl shadow-md "
-            />
-          ))
-        }
-      </div>
-    </div>
-  </section>
+ <section class="py-12 sm:py-12">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+   <h2 class="mb-8 text-3xl font-medium tracking-tight sm:text-4xl">Projects</h2>
+   <div class="flex flex-col">
+    {
+     projects.map((project) => (
+      <img src={project.image} alt={project.description} class="my-6 rounded-3xl shadow-md " />
+     ))
+    }
+   </div>
+  </div>
+ </section>
 </Layout>
