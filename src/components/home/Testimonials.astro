@@ -79,15 +79,17 @@ const testimonials = [
    <h2 class="mx-auto max-w-3xl text-center text-3xl font-medium tracking-tight sm:text-6xl">
     Testimonials
    </h2>
+
    <div
     id="testimonialsContainer"
-    class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+    class="mt-24 grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
    >
+    <!-- add hidden class in place of the first empty string to allow hiding of part of the testimonials, also enable button and script -->
     {
      testimonials.map((testimonial, index) => (
       <figure
-       class={`testimonial mx-auto flex max-w-lg flex-col items-center gap-2 py-8 lg:px-8 lg:py-4 ${
-        index > 2 ? 'hidden' : ''
+       class={`testimonial mx-auto flex max-w-lg flex-col items-center justify-center gap-2 py-8 lg:px-8 lg:py-4 ${
+        index > 2 ? '' : ''
        }`}
       >
        <div class="flex flex-row gap-2">
@@ -115,17 +117,17 @@ const testimonials = [
      ))
     }
    </div>
-   <button
+   <!-- <button
     id="toggleButton"
     class="mt-8 rounded bg-primary-600 px-4 py-2 text-white hover:bg-primary-700"
    >
     See More Testimonials
-   </button>
+   </button> -->
   </div>
  </div>
 </section>
 
-<script>
+<!-- <script>
  document.getElementById('toggleButton').addEventListener('click', function () {
   const testimonials = document.querySelectorAll('#testimonialsContainer .testimonial.hidden');
   const isExpanded = testimonials.length === 0;
@@ -134,4 +136,4 @@ const testimonials = [
   });
   this.textContent = isExpanded ? 'See More Testimonials' : 'See Less';
  });
-</script>
+</script> -->
