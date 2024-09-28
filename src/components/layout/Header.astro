@@ -47,7 +47,11 @@ const links = [
     class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200"
    >
     <span class="sr-only">Logo</span>
-    <img class="w-14 sm:w-24" src="/assets/logo-inverted.webp" alt="Reflair logo" />
+    <img
+     class="w-14 sm:w-24"
+     src="/assets/logo-inverted.webp"
+     alt="Reflair logo"
+    />
    </a>
   </div>
 
@@ -60,7 +64,7 @@ const links = [
       links.map((link) => (
        <a
         href={link.href}
-        class="group inline-flex py-4 text-base font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-primary-200 sm:py-6 sm:text-xl"
+        class="group inline-flex py-4 text-base font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-white sm:py-6 sm:text-xl"
        >
         <div class="flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 sm:gap-12">
          <div class=" flex items-center">
@@ -76,7 +80,7 @@ const links = [
    <!-- Toggle menu -->
    <button
     type="button"
-    class="inline-flex h-14 w-14 items-center justify-center rounded-full text-primary-950 ring-primary-950 transition hover:bg-primary-500/10 focus:outline-none focus-visible:ring-2 dark:text-primary-200 dark:hover:bg-primary-400/10 sm:hidden"
+    class="inline-flex h-14 w-14 items-center justify-center rounded-full text-primary-950 ring-primary-950 transition hover:bg-primary-500/10 focus:outline-none focus-visible:ring-2 dark:text-white dark:hover:bg-primary-400/10 sm:hidden"
     @click="open = !open"
     @mousedown="if (open) $event.preventDefault()"
     aria-controls="website-menu"
@@ -89,7 +93,7 @@ const links = [
      class="h-8 w-8"
      :class="{ 'hidden': open, 'block': !(open) }"
      xmlns="http://www.w3.org/2000/svg"
-     fill="currentColor"
+     fill="#e7dfce"
      viewBox="0 0 24 24"
      aria-hidden="true"
     >
@@ -100,7 +104,7 @@ const links = [
      class="h-8 w-8"
      :class="{ 'block': open, 'hidden': !(open) }"
      xmlns="http://www.w3.org/2000/svg"
-     fill="currentColor"
+     fill="#e7dfce"
      viewBox="0 0 24 24"
      aria-hidden="true"
     >
@@ -138,9 +142,9 @@ const links = [
      links.map((link) => (
       <a
        href={link.href}
-       class="group inline-flex py-4 text-xl font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-primary-200 sm:py-6 sm:text-2xl"
+       class="group inline-flex py-4 text-xl font-medium tracking-tight text-primary-950 transition focus-visible:outline-none dark:text-white sm:py-6 sm:text-2xl"
       >
-       <div class="flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200">
+       <div class="flex flex-1 items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-white">
         <div class="flex items-center gap-6">
          <span class="text-xs">{link.ref}</span>
          <span class="group-hover:underline">{link.name}</span>
